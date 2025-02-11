@@ -10,14 +10,17 @@ import { useLevelStore } from '../state/UseLevelStore';
 
 const LevelScreen = () => {
   const { levels } = useLevelStore();
-  
+  console.log('Levels==========', levels);
 
   const levelPressHandler = (id) => {
     const levelKey = `level ${id}`; // No need for "as keyof GameLevels" in JavaScript
     navigate('GameScreen', {
+    
       level: {...levels, id: id }, // Assuming 'level' is defined somewhere accessible
-    });
+    },  );
   };
+
+
 
   const renderItem = ({ item }) => {
     const opacity = item?.unlocked ? 1 : 0.5;

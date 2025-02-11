@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
         position:'absolute',
         bottom:20,
         alignSelf: 'center',
+      
     },
     text:{
         fontFamily:FONTS.Twinkle,
