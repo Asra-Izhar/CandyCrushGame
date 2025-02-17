@@ -5,7 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 const GameHeader = ({ totalCount, collectedCandies, time }) => {
-    console.log('time=============================', time);
+    console.log('time============================= for every level', time);
 
     return (
         <View style={styles.container}>
