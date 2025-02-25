@@ -19,8 +19,8 @@ const candyImages = {
           [1, 2, 1, 1, 2, 5],
           [null, 3, 2, 1, 5, null],
         ],
-        pass: 80,
-        time: 30000,
+        pass: 30,
+        time: 35000,
       },
       level2: {
         grid: [
@@ -31,7 +31,7 @@ const candyImages = {
           [4, 3, 2, 1, 1, 2, null],
         ],
         pass: 120,
-        time: 35000,
+        time: 40000,
       },
       level3: {
         grid: [

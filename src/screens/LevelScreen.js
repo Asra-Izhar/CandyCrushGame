@@ -1,5 +1,7 @@
 
 import React from 'react';
+
+
 import { View, Text, ImageBackground, Image, FlatList } from 'react-native';
 import { commonStyles } from '../styles/commonStyles';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -7,15 +9,19 @@ import { levelStyles } from '../styles/levelStyles';
 import ScalePress from '../components/ui/ScalePress';
 import { goBack, navigate } from '../utils/NavigationUtil';
 import { useLevelStore } from '../state/UseLevelStore';
+import { gameLevels } from '../utils/data';
+
+
 
 const LevelScreen = () => {
   const { levels } = useLevelStore();
   
 
   const levelPressHandler = (id) => {
-    const levelKey = `level ${id}`; // No need for "as keyof GameLevels" in JavaScript
+    const levelKey = `level${id}`;
+    const level = gameLevels[levelKey];
     navigate('GameScreen', {
-      level: {...levels, id: id }, // Assuming 'level' is defined somewhere accessible
+      levels: {...level, id: id }, // Assuming 'level' is defined somewhere accessible
     });
   };
 
@@ -92,3 +98,38 @@ const LevelScreen = () => {
 };
 
 export default LevelScreen;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
